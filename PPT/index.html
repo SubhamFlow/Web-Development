@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide AI</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            padding: 40px 20px;
+            border: 1px solid #1a1a1a;
+            border-radius: 16px;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: clamp(2rem, 10vw, 3.5rem);
+            font-weight: 900;
+            margin-bottom: 35px;
+            background: linear-gradient(135deg, #00f2ff 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+            filter: drop-shadow(0 0 15px rgba(0, 242, 255, 0.2));
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 100%;
+            padding: 16px;
+            background: #111;
+            border: 1px solid #333;
+            color: #fff;
+            border-radius: 12px;
+            font-size: 16px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #00f2ff;
+            box-shadow: 0 0 0 4px rgba(0, 242, 255, 0.1);
+        }
+
+        button {
+            width: 100%;
+            padding: 16px;
+            background: #00f2ff;
+            color: #000;
+            border: none;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        button:hover {
+            background: #00d8e4;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 242, 255, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button:disabled {
+            background: #222;
+            color: #555;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 480px) {
+            .container {
+                border: none;
+                background: transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Slide.AI</h1>
+        <div class="input-group">
+            <input type="text" id="prompt" placeholder="Enter presentation topic..." autocomplete="off">
+        </div>
+        <button onclick="download()">Generate Presentation</button>
+    </div>
+
+</body>
+</html>
