@@ -1,5 +1,5 @@
 
-SLIDE.AI 🚀
+# SLIDE.AI 🚀
 
 This project is a high-speed, AI-powered engine designed to transform a single text prompt into a professional, multi-slide PowerPoint presentation. It integrates real-time LLM processing with dynamic media fetching and client-side document generation.
 
