@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/807fb5eb0c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="song-container">
+        <div class="song-img">
+        
+           <img src="second.jpg"alt="song1">
+        </div>
+        <div class="input">
+            <input type="range"id="vol"value="0"step="0.1">
+        </div>
+        <audio src="second.mp3"id="audio"controls></audio>
+        <div class="buttons">
+
+            <div><i class="fa-solid fa-backward"id="backward"></i></div>
+            <div><i class="fa-solid fa-play"id="ctrlIcon"></i></div>
+            <div><i class="fa-solid fa-forward"id="forward"></i></i></div>
+
+              
+        </div>
+        <p></p>
+        <div class="volume-section">
+
+            <div><i class="fa-solid fa-volume-high"id="volumeimg"></i></div>
+            <div><input type="range"id="sound"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

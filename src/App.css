@@ -1,0 +1,205 @@
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-y: auto; /* page-level scroll */
+}
+
+/* ================= HEADER ================= */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.header h1 {
+  font-size: 42px;
+  margin: 0;
+  color: aliceblue;
+  font-family: fangsong;
+  font-weight: bolder;
+}
+
+/* ================= CHAT AREA ================= */
+.txt-border {
+  width: 100%;
+  max-width: 900px;
+  margin: 100px auto 180px auto; /* space for header + footer */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Message row */
+.txt {
+  display: flex;
+  width: 100%;
+}
+
+/* User message */
+.txt .p1 {
+  margin-left: auto;
+  padding: 14px 18px;
+  background-color: #1E88E5;
+  border-radius: 16px 16px 4px 16px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+  max-width: 75%;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+/* Bot message */
+.txt .p2 {
+  margin-right: auto;
+  padding: 14px 18px;
+  background-color: #2e7d32;
+  border-radius: 16px 16px 16px 4px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+  max-width: 75%;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+/* Time / utility text */
+.red {
+  color: #ff0000;
+  font-size: 12px;
+  margin-left: 6px;
+  opacity: 0.8;
+}
+
+/* ================= FOOTER INPUT ================= */
+.box {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 900px;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #121212;
+  border-top: 1px solid #1f1f1f;
+  z-index: 10;
+}
+
+/* Input */
+.search {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px 16px;
+  border-radius: 24px;
+  border: 1px solid #333;
+  font-size: 16px;
+  background-color: #1f1f1f;
+  color: whitesmoke;
+}
+
+.search:focus {
+  outline: none;
+  border-color: #3f8cff;
+}
+
+/* Send button */
+.btn {
+  padding: 14px 20px;
+  border-radius: 24px;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #fbc02d;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .txt-border {
+    margin: 90px auto 200px auto;
+    padding: 14px;
+  }
+
+  .txt .p1,
+  .txt .p2 {
+    max-width: 90%;
+    font-size: 15px;
+  }
+
+  .box {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 220px;
+  }
+}
+
+
+/* Message row wrapper */
+.txt-div1,
+.txt-div2 {
+  display: flex;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+/* YOUR messages → RIGHT */
+.txt-div1 {
+  justify-content: flex-end;
+}
+
+/* AI messages → LEFT */
+.txt-div2 {
+  justify-content: flex-start;
+}
+
+/* Your bubble */
+.txt-div1 .p1 {
+  background-color: #1E88E5;
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 16px 16px 4px 16px;
+  max-width: 75%;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+/* AI bubble */
+.txt-div2 .p2 {
+  background-color: #2e7d32;
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 16px 16px 16px 4px;
+  max-width: 75%;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
