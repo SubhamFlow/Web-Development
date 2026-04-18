@@ -158,7 +158,7 @@ Make 6 slides. Keep imagePrompt to 2 words max. Keep points short (under 10 word
             });
         }
 
-        //front page 
+        //front page of ppt
         await pres.writeFile({ fileName: `${prompt}_Design_V2.pptx` });
 
     } catch (err) {
