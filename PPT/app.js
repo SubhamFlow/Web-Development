@@ -1,3 +1,4 @@
+//add api keys in .env file
 const GROQ_API_KEY = "your_api_key";
 const PEXELS_API_KEY = "your_api_key";
 
