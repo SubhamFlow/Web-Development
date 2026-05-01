@@ -4,7 +4,7 @@ let qrtext=document.getElementById("qrtext")
 let download=document.getElementById("download")
 
 function generateQR(){
-
+// api calling with provided context text
 qrImg.src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+ qrtext.value
 
 // ImgBox.classList.add("show-img")
@@ -16,7 +16,7 @@ qrImg.onload=function(){
     
     download.style.display="block"
 }
-// generateQR()
+generateQR()
 
 
 
